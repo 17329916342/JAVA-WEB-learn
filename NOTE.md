@@ -9,5 +9,3 @@
   1. 创建并返回基于客户请求的动态HTML页面。
 
   2. 与数据库进行通信。
-
-     ![image-20200712171047414](C:\Users\feito\AppData\Roaming\Typora\typora-user-images\image-20200712171047414.png)
