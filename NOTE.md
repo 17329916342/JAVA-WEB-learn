@@ -8,8 +8,9 @@
 
   1. 创建并返回基于客户请求的动态HTML页面。
   2. 与数据库进行通信。
-<<<<<<< HEAD
-=======
+
+    <<<<<<< HEAD
+    =======
 
 - #### 如何使用Servlet？
 
@@ -85,18 +86,27 @@
 
      
 
-
 - #### servlet的生命周期
 
-  1. 当浏览器访问Servlet的时候，Tomcat会查询当前Servlet的实例化对象是否存在，如果不存在，则通过反射机制动态创建对象，如果存在，直接执行第三步。
-  2. 调用init方法完成初始化操作。
-  3. 调用service方法完成业务逻辑操作。
-  4. 关闭tomcat，会调用destroy方法，释放当前对象所占用的资源。
+
+1. 当浏览器访问Servlet的时候，Tomcat会查询当前Servlet的实例化对象是否存在，如果不存在，则通过反射机制动态创建对象，如果存在，直接执行第三步。
+2. 调用init方法完成初始化操作。
+3. 调用service方法完成业务逻辑操作。
+4. 关闭tomcat，会调用destroy方法，释放当前对象所占用的资源。
+
+Servlet的生命周期方法：无参构造函数、init、service、destroy
+
+1. 无参构造函数只调用一次，创建对象。
+2. init只调用一次，初始化对象。
+3. service调用N次，执行业务方法。
+4. destory只调用一次，卸载对象。
+
+- #### ServletConfig
+
+  该接口用来描述Servlet的基本信息。
+
+  getServletName() 返回Servlet的全类名（即包括根目录的类名 ） 
+
+  getInitParameter(String key)	获取init参数的值，在web.xml中配置
+
   
-  Servlet的生命周期方法：无参构造函数、init、service、destroy
-  
-  1. 无参构造函数只调用一次，创建对象。
-  2. init只调用一次，初始化对象。
-  3. service调用N次，执行业务方法。
-  4. destory只调用一次，卸载对象。
->>>>>>> aa9ef6e... Servlet详解1

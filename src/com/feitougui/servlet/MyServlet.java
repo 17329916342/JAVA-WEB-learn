@@ -12,11 +12,13 @@ public class MyServlet implements Servlet {
     }
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
+        System.out.println(servletConfig.getServletName());
         System.out.println("正在初始化");
     }
 
     @Override
     public ServletConfig getServletConfig() {
+
         return null;
     }
 
